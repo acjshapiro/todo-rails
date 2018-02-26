@@ -1,9 +1,9 @@
 <h1>Shit You Need To Do</h1>
 <br />
-<p><%= link_to 'New Todo', new_todo_path %></p>
+<button><%= link_to 'New Todo', new_todo_path %></button>
 <% @todos.each do |todo| %>
-  <h2><%= todo.task %></h2>
-  <%= link_to 'View', todo_path(todo) %>
-  <%= link_to 'Edit', edit_todo_path(todo) %>
-  <%= link_to 'Delete', todo, method: :delete %>
+  <h4><%= todo.task %></h4>
+  <button><%= link_to 'View', todo_path(todo) %></button>
+  <button><%= link_to 'Edit', edit_todo_path(todo) %></button>
+  <button class="danger"><%= link_to 'Delete', todo, method: :delete %></button>
 <% end %>
